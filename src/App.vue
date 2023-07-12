@@ -7,6 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper">
       <nav>
         <RouterLink to="/">VuePivottableView</RouterLink>
+        <RouterLink to="/vue-pivot-table-plus">vue-pivot-table-plus</RouterLink>
       </nav>
     </div>
   </header>

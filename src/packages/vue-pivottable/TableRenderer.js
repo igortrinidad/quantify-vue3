@@ -85,9 +85,10 @@ function makeRenderer (opts = {}) {
       try {
         const props = Object.assign({},
           this.$props,
-          this.$attrs.props
+          this.$attrs.props,
         )
         pivotData = new PivotData(props)
+        console.log(pivotData)
       } catch (error) {
         // eslint-disable-next-line no-console
         if (console && console.error(error.stack)) {
@@ -384,7 +385,7 @@ const TSVExportRenderer = {
 }
 
 export default {
-  Table: makeRenderer({ name: 'vue-table' }),
+  Table: makeRenderer({ name: 'vue-tabless' }),
   'Table Heatmap': makeRenderer({ heatmapMode: 'full', name: 'vue-table-heatmap' }),
   'Table Col Heatmap': makeRenderer({ heatmapMode: 'col', name: 'vue-table-col-heatmap' }),
   'Table Row Heatmap': makeRenderer({ heatmapMode: 'row', name: 'vue-table-col-heatmap' }),

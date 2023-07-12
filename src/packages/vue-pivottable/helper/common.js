@@ -4,7 +4,9 @@ export default {
   props: {
     data: {
       type: [Array, Object, Function],
-      required: true
+      default: function () {
+        return []
+      }
     },
     aggregators: {
       type: Object,
