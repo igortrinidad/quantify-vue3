@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-full bg-gray-100 p-4">
+  <div class="w-full max-w-full">
     
     <!-- COLUMN GROUPS -->
     <draggable 
@@ -8,7 +8,7 @@
       item-key="key"
       ghost-class="ghost"
       animation="200"
-      class="quantify-pivot-table-column-groups overflow-x-auto flex transition-all duration-200"
+      class="quantify-pivot-table-column-groups overflow-x-auto flex transition-all duration-200 max-h-[60vh] overflow-y-auto"
       :component-data="{
         tag: 'div',
         type: 'transition-group',
@@ -16,8 +16,8 @@
       }"
     >
       <template #item="{ element, index }">
-        <div class="flex flex-col cursor-move border ">
-          <div class=" px-4 py-2 whitespace-nowrap bg-gray-200">
+        <div class="flex flex-col cursor-move border">
+          <div class=" px-4 py-2 whitespace-nowrap bg-gray-200 sticky top-0">
             {{ element.title }}
           </div>
           <QuantifyPivotTableColumns :column-group="element" :column-group-index="index" />

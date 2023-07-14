@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 class="text-2xl font-bold">vue-pivot-table-plus</h1>
     <Pivot
       :data="data"
       v-model:fields="fields"
