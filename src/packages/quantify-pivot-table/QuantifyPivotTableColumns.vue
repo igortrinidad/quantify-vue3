@@ -2,13 +2,19 @@
   <draggable 
     v-model="getColumnGroupColumns" 
     group="columnGroups" 
-    class="list-columns flex"
     @start="drag=true" 
     @end="drag=false" 
     item-key="key"
     tag="div"
     ghost-class="ghost"
     :move="checkMove"
+    animation="200"
+    class="list-columns flex"
+    :component-data="{
+      tag: 'div',
+      type: 'transition-group',
+      name: 'flip-list'
+    }"
   >
     <template #item="{ element }">
       <div class="border whitespace-nowrap flex flex-col">
@@ -45,7 +51,8 @@
     },
     data() {
       return {
-        formatters
+        formatters,
+        drag: false,
       }
     },
     computed: {

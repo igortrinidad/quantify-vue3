@@ -5,11 +5,15 @@
     <draggable 
       v-model="getColumnGroups" 
       group="columnGroups"
-      class="quantify-pivot-table-column-groups overflow-x-auto flex "
-      @start="drag=true" 
-      @end="drag=false" 
       item-key="key"
       ghost-class="ghost"
+      animation="200"
+      class="quantify-pivot-table-column-groups overflow-x-auto flex transition-all duration-200"
+      :component-data="{
+        tag: 'div',
+        type: 'transition-group',
+        name: !drag ? 'flip-list' : null
+      }"
     >
       <template #item="{ element, index }">
         <div class="flex flex-col cursor-move border ">
@@ -40,6 +44,7 @@
     },
     data() {
       return {
+        drag: false,
         showDrawer: false
       }
     },
@@ -69,6 +74,14 @@
 </script>
 
 <style lang="scss">
+
+.flip-list-move {
+  transition: transform 0.5s;
+}
+
+.no-move {
+  transition: transform 0s;
+}
 
   .quantify-pivot-table {
     
