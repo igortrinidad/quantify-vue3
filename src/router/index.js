@@ -4,6 +4,7 @@ import QuantifyPivotTableView from '../views/QuantifyPivotTableView.vue'
 import AgGridView from '../views/AgGridView.vue'
 import VuePivottableView from '../views/VuePivottableView.vue'
 import VuePivotTablePlusView from '../views/VuePivotTablePlusView.vue'
+import TipTapView from '../views/TipTapView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,10 @@ const router = createRouter({
     {
       path: '/vue-pivot-table-plus',
       component: VuePivotTablePlusView
+    },
+    {
+      path: '/tip-tap-vue',
+      component: TipTapView
     },
   ]
 })
