@@ -5,6 +5,7 @@ import { createPinia } from 'pinia'
 import Antd from "ant-design-vue";
 import 'ant-design-vue/dist/reset.css';
 import * as Sentry from "@sentry/vue";
+import { clickOutsideDirective } from '@/directives/click-outside'
 
 import App from './App.vue'
 import router from './router'
@@ -23,5 +24,7 @@ if (process.env.NODE_ENV !== 'development') {
 app.use(createPinia())
 app.use(router)
 app.use(Antd)
+
+clickOutsideDirective(app)
 
 app.mount('#app')

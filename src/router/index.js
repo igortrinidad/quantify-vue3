@@ -5,6 +5,7 @@ import AgGridView from '../views/AgGridView.vue'
 import VuePivottableView from '../views/VuePivottableView.vue'
 import VuePivotTablePlusView from '../views/VuePivotTablePlusView.vue'
 import TipTapView from '../views/TipTapView.vue'
+import ClickoutsideDirectiveView from '../views/ClickoutsideDirectiveView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,10 @@ const router = createRouter({
     {
       path: '/tip-tap-vue',
       component: TipTapView
+    },
+    {
+      path: '/click-outside',
+      component: ClickoutsideDirectiveView
     },
   ]
 })

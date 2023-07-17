@@ -5,6 +5,7 @@
     <router-link to="/vue-pivottable" class="p-4 border rounded-lg border-blue-500 text-center">vue-pivottable</router-link>
     <router-link to="/vue-pivot-table-plus" class="p-4 border rounded-lg border-blue-500 text-center">vue-pivot-table-plus</router-link>
     <router-link to="/tip-tap-vue" class="p-4 border rounded-lg border-blue-500 text-center">tip-tap-vue</router-link>
+    <router-link to="/click-outside" class="p-4 border rounded-lg border-blue-500 text-center">click-outside</router-link>
   </div>
 </template>
 <script>
